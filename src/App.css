@@ -1,0 +1,123 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.you-won {
+  margin-right: 10px;
+}
+
+.game-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.tile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.tile {
+  height: 100px;
+  width: 100px !important;
+  margin-bottom: 1px;
+}
+
+.tile:not(.tile-empty) {
+  box-shadow: inset 0px 0px 10px -3px #00000080;
+  transition: filter 0.1s ease-in-out, background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2d2d2d;
+  font-family: fantasy;
+  text-shadow: 0px 0px 5px white;
+  user-select: none;
+}
+
+.tile-empty {
+  box-shadow: inset 0px 0px 0px 1px #c7c7c7;
+  background-color: #ececec;
+}
+
+.tile-selected-container {
+  height: 106px;
+  width: 106px;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  border: 2px dotted #333333;
+  align-items: center;
+}
+
+.tile-selected-container .tile:hover {
+  filter: brightness(1.15);
+}
+
+
+
+.game-panel-container {
+  width: 650px;
+  color: #ffffff;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 120px;
+}
+.game-info-panel {
+  color: #333333;
+  width: 70px;
+}
+.game-panel-container button {
+  background-color: #5f7ce4;
+  border: 1px solid #8e8e8e;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+}
+
+.game-panel-container button.disabled {
+  background-color: #8a8a8a;
+  cursor: default;
+  pointer-events: none;
+}
+
+.game-panel-container button:hover {
+  background-color: #2a4bda;
+}
+
+.game-panel-container > div {
+  margin: 0 20px;
+}
+
+
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+}
+.relative {
+  position: relative;
+}
